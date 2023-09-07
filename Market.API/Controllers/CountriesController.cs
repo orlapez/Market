@@ -21,6 +21,8 @@ namespace Market.API.Controllers
             _context = context; 
         }
 
+
+        //get por lista
         [HttpGet]
         public async Task<ActionResult> Get()
         {
@@ -28,6 +30,22 @@ namespace Market.API.Controllers
         }
 
 
+        //Get por parámetro
+        [HttpGet("{id}")]
+        public async Task<ActionResult> Get(int id)
+        {
+            
+            var country= await _context.Countries.FirstOrDefaultAsync(x => x.Id == id); 
+            if(country == null) { 
+            
+            return NotFound();  
+            }
+
+            return Ok(country);
+
+        }
+
+        // Post- Create
         [HttpPost]
         public async Task<ActionResult> Post(Country country)
         {

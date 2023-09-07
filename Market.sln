@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Shared", "Market.Shared\Market.Shared.csproj", "{85372A8F-BBD6-484A-8863-753B2DF827CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Shared", "Market.Shared\Market.Shared.csproj", "{85372A8F-BBD6-484A-8863-753B2DF827CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.API", "Market.API\Market.API.csproj", "{C55486F9-313F-4B93-B92C-C8D1D598C7F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.API", "Market.API\Market.API.csproj", "{C55486F9-313F-4B93-B92C-C8D1D598C7F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.WEB", "Market.WEB\Market.WEB.csproj", "{097FE37B-F579-444E-935B-22E1A836FC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.WEB", "Market.WEB\Market.WEB.csproj", "{097FE37B-F579-444E-935B-22E1A836FC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Mobile", "Market.Mobile\Market.Mobile.csproj", "{A4581138-B95A-4C53-BD31-2C685E5029F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Mobile", "Market.Mobile\Market.Mobile.csproj", "{A4581138-B95A-4C53-BD31-2C685E5029F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
