@@ -55,5 +55,37 @@ namespace Market.API.Controllers
             return Ok(country);
         }
 
+        // Put-- update
+        [HttpPut]
+        public async Task<ActionResult> Put(Country country)
+        {
+
+            _context.Update(country);
+            await _context.SaveChangesAsync();
+            return Ok(country);
+        }
+
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+
+            var filaafectada = await _context.Countries
+                .Where(x => x.Id == id)
+                .ExecuteDeleteAsync();
+
+            if(filaafectada==0)
+            {
+
+                return NotFound();
+
+            }
+
+            return NoContent(); 
+
+
+
+        }
+
     }
 }
