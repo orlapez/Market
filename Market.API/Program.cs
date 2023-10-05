@@ -1,4 +1,5 @@
 using Market.API.Data;
+using Market.API.Services;
 using Market.WEB.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 
 // inyección de dependencias a SQL SERVER
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=DefaultConnection"));
+builder.Services.AddScoped<IApiService, ApiService>();
 
 
 
