@@ -56,7 +56,7 @@
 
     private async Task Load()
     {
-        var responseHppt = await repository.Get<List<Country>>("api/countries");
+        var responseHppt = await repository.Get<List<Country>>("/api/countries");
         Countries = responseHppt.Response!;
     }
 

@@ -14,7 +14,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 // HttpClient para consumir el API desde la Web
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7000/") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://marketapi.azurewebsites.net/") });
 
 //Inyectamos el patrón Repository al proyecto WEB
 builder.Services.AddScoped<IRepository, Repository>();

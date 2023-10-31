@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Market.Shared.Entities
 {
@@ -13,6 +14,7 @@ namespace Market.Shared.Entities
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public string Name { get; set; }
 
+        [JsonIgnore]
         public ICollection<State>? States { get; set; }
 
         [Display(Name = "Estados/Departamentos")]
