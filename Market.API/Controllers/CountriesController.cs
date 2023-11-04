@@ -166,7 +166,7 @@ namespace Market.API.Controllers
         }
     }
 
-        ///(*OJO esto es una prueba ,  ¡ Saludos Azure DevOps!)
+        ///(vAMOS A PROBAR PIPELINE CD  ¡ Saludos Azure DevOps!)
 
 [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
