@@ -2,6 +2,7 @@
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+# Para cuentas gratis el runtime de app service azure en el script del pipeline CI debe ser --runtime win-x86
 
 trigger:
 - main
@@ -25,7 +26,6 @@ steps:
   displayName: 'Installing EF Core CLI'
   inputs:
     script: 'dotnet tool install --global dotnet-ef'
-    
 - task: CmdLine@2
   displayName: 'Generating DB script'
   inputs:
@@ -36,12 +36,10 @@ steps:
     command: 'publish'
     publishWebProjects: true
     projects: $(proyecto)
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --runtime win-x86 --self-contained'
-    zipAfterPublish: false
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --runtime win-x86 --self-contained true'
+    zipAfterPublish: true
     modifyOutputPath: false
 - task: PublishBuildArtifacts@1
-  displayName: 'Publicando los artefactos'
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: drop
- 
