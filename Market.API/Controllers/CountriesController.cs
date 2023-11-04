@@ -166,7 +166,7 @@ namespace Market.API.Controllers
         }
     }
 
-        ///(Saludos Azure DevOps)
+        ///(*OJO ¡ Saludos Azure DevOps!)
 
 [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
