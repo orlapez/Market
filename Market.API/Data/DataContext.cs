@@ -16,7 +16,7 @@ namespace Market.API.Data
 public DbSet<State> States { get; set; }
         public DbSet<City> Cities { get; set; }
 
-        //public DbSet<Owner> Owners { get; set; }
+        public DbSet<Owner> Owners { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
