@@ -26,4 +26,8 @@
     <ProjectReference Include="..\Market.WEB\Market.WEB.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
