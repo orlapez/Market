@@ -18,6 +18,8 @@ public DbSet<State> States { get; set; }
 
         public DbSet<Owner> Owners { get; set; }
 
+        public DbSet<Pet> Pets { get; set; }    
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
